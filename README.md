@@ -1,0 +1,1 @@
+This repository contains tasks on React.js as i continue my specialization on Frontend development.
