@@ -1,16 +1,16 @@
-import $ from 'jquery';
+import $ from 'jquery'
 import _ from 'lodash';
+import './body.css'
 
-$(document).ready(function() {
-  $('body').append('<p>Dashboard data for the students</p>');
-  $('body').append('<button id="start-btn">Click here to get started</button>');
-  $('body').append('<p id="count"></p>');
+$('body').append('<p>Dashboard data for the students</p>');
+$('body').append('<button>Click here to get started</button>');
+$('body').append('<p id="count"></p>');
 
-  let count = 0;
-  const updateCounter = _.debounce(() => {
-    count++;
-    $('#count').text(`${count} clicks on the button`);
-  }, 500);
+let count = 0;
 
-  $('#start-btn').click(updateCounter);
-});
+const updateCounter = () => { count++; }
+
+$('button').click(_.debounce(() => {
+  updateCounter();
+  $('#count').text(`${count} clicks on the button`);
+}));
