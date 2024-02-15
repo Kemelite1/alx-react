@@ -1,0 +1,2 @@
+# React state
+State is the most important concept in react. "State" is a built-in feature that allows components to manage and store data that can change over time. State is used to represent the internal state of a component, and when the state changes, React re-renders the component to reflect the updated state.
