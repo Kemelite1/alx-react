@@ -1,11 +1,7 @@
-import { getListObject, addElementToList } from './3-list.js';
+import { getListObject, addElementToList } from './3-list';
 
-//getListObject
-const array = ['a', 'b', 'c'];
-const immutableList = getListObject(array);
-console.log(immutableList); // Output: List [ "a", "b", "c" ]
+const list = getListObject(['Maria', 'Dozie', 'Bovi']);
 
-//addElementToList
-const initialList = getListObject(['a', 'b', 'c']);
-const updatedList = addElementToList(initialList, 'd');
-console.log(updatedList); // Output: List [ "a", "b", "c", "d" ]
+console.log(getListObject(list));
+
+console.log(addElementToList(list, 'Charles'));
