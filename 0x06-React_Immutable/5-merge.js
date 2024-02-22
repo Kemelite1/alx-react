@@ -1,14 +1,15 @@
-import { List, Map } from 'immutable';
+import { Map, List } from 'immutable';
 
-//concatenate two arrays into a List
-export function concatElements(page1, page2) {
-    const concatenatedList = List(page1.concat(page2));
-    return concatenatedList;
+export function concatedElements(page1, page2) {
+    const list1 = List(page1);
+    const list2 = List(page2);
+
+    return list1.concat(list2);
 }
 
-//merge two objects into a List
 export function mergeElements(page1, page2) {
-    // Merge the objects using Map and use page2 values if keys are the same
-    const mergedList = List(Map(page1).merge(Map(page2)));
-    return mergedList;
+    const map1 = Map(page1);
+    const map2 = Map(page2);
+
+    return map1.merge(map2);
 }

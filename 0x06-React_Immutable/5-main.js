@@ -1,12 +1,23 @@
-import { concatElements, mergeElements } from './5-merge.js';
+import { concatElements, mergeElements } from "./5-merge.js";
 
-const page1 = [1, 2, 3];
-const page2 = [4, 5, 6];
-const concatenatedList = concatElements(page1, page2);
-console.log(concatenatedList); // Output: List [ 1, 2, 3, 4, 5, 6 ]
+const array1 = ['Amanda', 'Larry'];
+const array2 = ['Jason', 'Amanda'];
 
-//
-const page1Obj = { a: 1, b: 2 };
-const page2Obj = { b: 3, c: 4 };
-const mergedList = mergeElements(page1Obj, page2Obj);
-console.log(mergedList); // Output: List [ [ 'a', 1 ], [ 'b', 3 ], [ 'c', 4 ] ]
+const object1 = {
+    1: 'Liam',
+    2: 'Noah',
+    3: 'Elijah',
+};
+const object2 = {
+    4: 'Oliver',
+    5: 'Jacob',
+    6: 'Lucas',
+};
+
+const concated = concatElements(array1, array2);
+console.log(concated);
+console.log(concated.toJS());
+
+const merged = mergeElements(object1, object2);
+console.log(merged);
+console.log(merged.toJS());
