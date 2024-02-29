@@ -1,3 +1,6 @@
+
+
+
 import getAllNotificationsByUser from './notifications';
 
 test('returns right data based on userId', () => {
